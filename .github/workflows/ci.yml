@@ -22,3 +22,6 @@ jobs:
 
       - name: Rodar app (teste simples)
         run: node index.js
+
+      - name: Rodar Testes
+        run: npm test
