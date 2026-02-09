@@ -3,6 +3,8 @@ name: CI Pipeline
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [main ]
 
 jobs:
   build:
@@ -22,3 +24,6 @@ jobs:
 
       - name: Rodar Testes
         run: npm test
+
+      - name: Build Docker image
+        run: docker build -t devops-lab .
